@@ -1,0 +1,29 @@
+package com.example.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.model.TollUsage;
+import com.example.repository.TollUsageFeignMSRepo;
+
+@Service
+public class TollService implements TollServiceIntf{
+
+	@Autowired
+	TollUsageFeignMSRepo feignRepo; 
+	
+	/*@RequestMapping(value="/client")*/
+	@Override
+	public List<TollUsage> findAll(){
+		return feignRepo.findAll();
+	}
+	
+/*	@SuppressWarnings("unchecked")
+	@RequestMapping(value="/client/{id}")*/
+	@Override
+	public TollUsage getById(String id){
+		return feignRepo.findById(id);
+	}
+}

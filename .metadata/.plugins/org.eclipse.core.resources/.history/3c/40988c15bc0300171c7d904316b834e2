@@ -1,0 +1,17 @@
+package com.example;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.netflix.client.config.IClientConfig;
+import com.netflix.loadbalancer.IPing;
+
+public class CustomLoadBalancer {
+	
+	@Autowired
+	private IClientConfig config;
+	
+	private IPing ribbonPing(IClientConfig config){
+		
+		
+	}
+}

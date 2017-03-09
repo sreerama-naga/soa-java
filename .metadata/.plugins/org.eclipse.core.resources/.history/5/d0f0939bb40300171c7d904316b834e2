@@ -1,0 +1,2 @@
+spring.profiles.active=qa
+spring.cloud.config.uri=http://192.168.1.15:8888

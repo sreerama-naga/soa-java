@@ -1,0 +1,16 @@
+package com.example.repository;
+
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.example.model.TollUsage;
+
+@FeignClient("tollusagems")
+public interface TollUsageFeignMSRepo {
+
+	@equestMapping("/tolls")
+	public List<TollUsage> findAll();
+	
+	public TollUsage findById(@PathVariable("id")String id);
+	
+}

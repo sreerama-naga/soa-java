@@ -1,0 +1,1 @@
+consul agent --dev --http-port 8700 --to start consul in 8700 port

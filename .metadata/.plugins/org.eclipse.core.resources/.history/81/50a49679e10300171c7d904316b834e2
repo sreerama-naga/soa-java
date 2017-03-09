@@ -1,0 +1,5 @@
+--to start consul in 8700 port
+consul agent --dev -http-port 8700 
+
+--enable rabbit mq plugins
+rabbitmq-plugins enab;e rabbitmq_management

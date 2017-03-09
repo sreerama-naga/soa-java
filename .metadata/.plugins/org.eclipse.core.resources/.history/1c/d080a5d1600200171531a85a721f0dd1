@@ -1,0 +1,4 @@
+#server.port=8888
+server.context-path=/spring
+#spring.data.mongodb.uri=mongo://localhost:27017/sg
+#default is test data base in mongo db

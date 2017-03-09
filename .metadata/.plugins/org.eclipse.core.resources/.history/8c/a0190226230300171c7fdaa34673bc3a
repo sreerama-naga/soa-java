@@ -1,0 +1,10 @@
+package com.example.repository;
+
+import org.springframework.cloud.netflix.feign.FeignClient;
+
+@FeignClient("tollusagems")
+public interface TollUsageFeignMSRepo {
+
+	public List<TollUsage> findAll();
+	
+}
